@@ -20,6 +20,7 @@ function showUser(element,g_id){
     console.log('show',element)
     element.forEach(ele => {
         const childEle=document.createElement('li');
+        childEle.setAttribute('class','list-group-item')
         childEle.textContent=ele.name+'   ';
         const addBut=document.createElement('button')
         addBut.id=ele.id;
