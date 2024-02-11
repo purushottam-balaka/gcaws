@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat App</title>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="text-center">
+            <h3>Chat App</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="container">
+                            <button class="btn btn-info" onclick="create_a_group()">Create a group</button>
+
+                        <h4 id="group-heading"></h4> 
+                        <ul id="group-list" class="list-group">
+                            
+                        </ul>
+                        <h4 id="grp-members-heading"></h4>
+                        <ul id="grp-members" class="list-group">
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-9">
+                    <ul id='grp-msg-list' class="list-group">
+
+                    </ul >
+                    </div>
+                <div class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <form onsubmit="save_message(event)">
+                        <label for="message">Enter your message</label>
+                        <input type="text" id="message" class="form-control">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+        
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+        <script src="./chat.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+                <div class="col-xs-4">
+                    <form onsubmit="signup_details(event)">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" required>
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <div>
+                        <label for="login">Already an user</label>
+                        <button class="btn btn-info" onclick="login_page()">Login</button>
+                    </div>
+            </div>
+        </div>
+        <script src="./singup.js"></script>
+    </body>
+
+</html>

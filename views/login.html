@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-xs-4">
+                <form onsubmit="login(event)">
+                    <label for="email" >Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                </form>
+                <div>
+                    <label for="signup">Not yet registered</label>
+                    <button onclick="signup_page()" class="btn btn-info">Signup</button>
+                </div>
+            </div>
+        </div>
+        <script src="./login.js"></script>
+    </body>
+</html>
