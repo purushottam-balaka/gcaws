@@ -9,7 +9,7 @@ async function signup_details(e){
             phone:e.target.phone.value,
         }
     
-        await axios.post('http://13.232.98.159:9000/signup',details)
+        await axios.post('http://13.235.2.168:9000/signup',details)
         .then((resp)=>{
             alert(resp.data.message)
             window.location.href='./login.html'

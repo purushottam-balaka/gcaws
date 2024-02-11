@@ -18,7 +18,7 @@ const groups=require('./model/groups');
 
 const userGroups=require('./model/userGroups');
 
-require('dotenv').config();
+require('dotenv');
 
 const cors=require('cors');
 
