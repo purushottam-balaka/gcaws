@@ -13,6 +13,9 @@ async function createGroup(e){
         console.log(err)
     }
 }
+document.getElementById('done').onclick=()=>{
+    location.href='./chat.html';
+}
 
 function showUser(element,g_id){
     document.getElementById('paragraph').innerHTML='Add users'
@@ -45,11 +48,11 @@ function showUser(element,g_id){
 
         }
     });
-    const subChildBut=document.createElement('button');
-    subChildBut.textContent('Done');
-    subChildBut.setAttribute('class','btn btn-info');
-    parentEle.appendChild(subChildBut);
-    subChildBut.onclick=async()=>{
-        location.href='./chat.html'
-    }
+    // const subChildBut=document.createElement('button');
+    // subChildBut.textContent='Done';
+    // subChildBut.setAttribute('class','btn btn-info');
+    // parentEle.appendChild(subChildBut);
+    // subChildBut.onclick=async()=>{
+    //     location.href='./chat.html'
+    // }
 }
