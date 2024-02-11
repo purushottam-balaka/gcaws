@@ -1,19 +1,4 @@
 const AWS=require('aws-sdk');
-const expense_table=require('../model/expenses');
-
-exports.download_expenses=async(req,res)=>{
-    try{
-        const expense=await expense_table.findAll({where:{UserId:req.user.id}})
-        const stringifiedExpenses=JSON.stringify(expense);
-        const filename=`Expense${req.user}/${new Date()}.txt`;
-        const fileURL=await uploadToS3(stringifiedExpenses,filename);
-        // console.log('File url',fileURL)
-        res.status(200).json({fileURL,success:true});
-    }catch(err){
-        res.status(500).json({success:false,err:err})
-    }
-   
-}
 
 async function uploadToS3(data,filename){
     const BUCKET_NAME=process.env.BUCKET_NAME;
